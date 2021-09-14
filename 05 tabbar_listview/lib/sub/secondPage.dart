@@ -150,11 +150,13 @@ class _SecondAppState extends State<SecondApp> {
                         ElevatedButton(
                             onPressed: () {
                               widget.list?.add(animal);
+                              print(widget.list?.length);
                               Navigator.of(context).pop();
                             },
                             child: Text('예')),
                         ElevatedButton(
                             onPressed: () {
+                              print(widget.list?.length);
                               Navigator.of(context).pop();
                             },
                             child: Text('아니요'))

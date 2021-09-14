@@ -77,7 +77,9 @@ class _MyHomePageState extends State<MyHomePage>
           FirstApp(
             list: animalList,
           ),
-          SecondApp()
+          SecondApp(
+            list: animalList,
+          )
         ],
         controller: controller,
       ),
