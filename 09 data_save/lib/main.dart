@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:sharedpreferences/fileApp.dart';
+import 'package:sharedpreferences/introPage.dart';
+import 'package:sharedpreferences/logoChanger.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,7 +17,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: IntroPage(),
+      //9-1
+      // home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
