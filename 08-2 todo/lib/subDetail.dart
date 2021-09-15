@@ -55,8 +55,17 @@ class _SubDetailState extends State<SubDetail> {
 
   void _addNavigation(BuildContext context) async {
     final result = await Navigator.of(context).pushNamed('/second');
-    setState(() {
-      todoList.add(result as String);
-    });
+    //할일 추가 창에서 아무것도 추가하지 않은 경우 오류 발생하여 오류 수정
+    /*
+     A non-null String must be provided to a Text widget.
+     'package:flutter/src/widgets/text.dart':
+     Failed assertion: line 378 pos 10: 'data != null'
+
+    */
+    if (result != null) {
+      setState(() {
+        todoList.add(result as String);
+      });
+    }
   }
 }
